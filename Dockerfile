@@ -31,6 +31,7 @@ ENV JAVA_OPTS="-Dhudson.udp=-1 -Djava.awt.headless=true -Dhudson.DNSMultiCast.di
 ENV JENKINS_OPTS="--argumentsRealm.roles.user=admin --argumentsRealm.passwd.admin=admin --argumentsRealm.roles.admin=admin"
 
 RUN jenkins-plugin-cli --plugins \
+    generic-webhook-trigger:latest \
     docker-build-publish:latest \
     pipeline-groovy-lib:latest \
     junit:latest \
